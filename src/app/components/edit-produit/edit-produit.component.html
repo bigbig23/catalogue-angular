@@ -1,0 +1,26 @@
+ <div class="container">
+     <div class="panel panel-primary">
+         <div class="panel-heading">Edition de Produit</div>
+         <div class="panel-body" *ngIf="currentProduit">
+                <form #f="ngForm" (ngSubmit)="updateProduit(f.value)">
+                        <div class="form-group">
+                            <label>Designation</label>
+                            <input class="form-control" type="text" name="designation" ngModel [(ngModel)]="currentProduit.designation">
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Quantite</label>
+                            <input class="form-control" type="number" name="quantite" ngModel [(ngModel)]="currentProduit.quantite">
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Prix</label>
+                            <input class="form-control" type="number" name="price" ngModel [(ngModel)]="currentProduit.price">
+                        </div>
+    
+                        <button class="btn btn-primary" type="submit">Update</button>
+    
+                    </form>
+         </div>
+     </div>
+ </div>
